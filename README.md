@@ -7,6 +7,20 @@ This repo demonstrates:
 
 ## Usage
 
-Apply deployments with kubectl:
+### Blue/Green Deployment
+Apply blue and green versions:
+```bash
+kubectl apply -f deployments/blue-green/
+```
 
+### Canary Deployment
+Apply canary version:
+```bash
+kubectl apply -f deployments/canary/
+```
 
+### Scaling Replicas
+Apply scaled replicas:
+```bash
+kubectl apply -f deployments/replicas/
+```
