@@ -4,5 +4,18 @@ metadata:
   name: app-scaled
 spec:
   replicas: 5
-
-
+  selector:
+    matchLabels:
+      app: my-app
+      version: scaled
+  template:
+    metadata:
+      labels:
+        app: my-app
+        version: scaled
+    spec:
+      containers:
+      - name: web
+        image: nginx:latest
+        ports:
+        - containerPort: 80
